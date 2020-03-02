@@ -2,7 +2,7 @@
 
 
 ## Rollout Docker
-apt-get install docker.io
+sudo apt-get install docker.io
 
 jetzt ist docker installiert
 dann die klassisichen Befehle
