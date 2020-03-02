@@ -3,7 +3,9 @@
 
 ## Installation Minikube
 
-Wichtig! Minikube ist lediglich eine Development lokal version um mit dem K8s mal zu interagieren. Das ist keine Produktivumgebung. 
+Wichtig! Minikube ist lediglich eine Development lokal version um mit dem K8s mal zu interagieren. Das ist keine Produktivumgebung. Für den Kurs braucht es nicht notgedrungen dieses Setup. GGf kann das auch mit diesesm Setup geschehen: [Rollout K8s other Tutorial](../0_Tutorial/Notes.md)
+
+<!--![BeispielImages](./img/1.png)-->
 
 ich habe in C:/ den folder k8s erstellt und hier sowohl downloads als auch executables liegen
 
@@ -37,15 +39,24 @@ Dienst starten
 >**kubectl get pod**
 Anzeige der laufenden Pods auf dem Server
 
->**minikube service hello-minikube --url** 
+>**minikube service hello-minikube --url**
+
 Return die URL
+
 >**kubectl delete services hello-minikube** 
+
 Service stoppen
+
 >**kubectl delete deployment hello-minikube** 
+
 Deployment löschen
->**minikube stop*** 
+
+>**minikube stop**
+
 den aktuellen server stopen
+
 >**minikube delete** 
+
 den rollout wieder gänzlichlöschen
 
 
