@@ -1,6 +1,24 @@
-# [Video 1](https://www.udemy.com/course/learn-kubernetes/learn/lecture/9703196#overview)
+# [Video 2](https://www.udemy.com/course/learn-kubernetes/learn/lecture/14655916#overview)
 
 
-Egal ob Developer, System-Admin oder Porject-Manager. Der Kurs dient der ersten Berührung.
+Das Video beschreibt die FOllow-Up Videos.
 
-![BeispielImages](./img/1.png)
+Wichtig scheint zu sein YAML-FILE / 
+
+Es gitb die Kurse:
+<ol>
+    <li>
+    Kubernetes for the absolute beginnter<br>
+    wenn keine weitere Wissen // High Level Overview // begriffe klären => auch für nicht Techniker
+    </li>
+    <li>
+    Kubernetes for the absolute beginnter<br>
+    Advanced topics // deploying // high availbaility // => für das Zeritifikat
+    </li>
+    <li>
+    Kubernetes for the absolute beginnter<br>
+    Für application developer => wie man in diesem Bereich perform => für das Zeritifikat
+    </li>
+</ol>
+
+<!--![BeispielImages](./img/1.png)-->
