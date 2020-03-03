@@ -1,21 +1,26 @@
-# Cheatsheet
+# Cheatsheet - <br>k8s bzw kubectl
 
 ## Allgemein
 <table style="width:100%">
   <tr>
     <th>Command</th>
     <th>Umsetzung</th>
-    <th> möglcihe Parameter</th>
+    <th> mögliche Parameter</th>
   </tr>
   <tr>
     <td>kubectl get node</td>
     <td>Liefert die Nodes retour</td>
     <td></td>
   </tr>
+  <tr>
+    <td>kubectl get all</td>
+    <td>LAlle Objekte von dem K8S Cluster</td>
+    <td></td>
+  </tr>
 <table>
 
 ## Pods
-Hier das <a href="./TemplateReplica.yml">Template-pod</a>, ein Beispiel YML file für die Erstellung eines Pods.
+Hier das <a href="./TemplatePod.yml">Template-pod</a>, ein Beispiel YML file für die Erstellung eines Pods.
  <table style="width:100%">
   <tr>
     <th>Command</th>
@@ -80,11 +85,32 @@ Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML f
   <tr>
     <th>Command</th>
     <th>Umsetzung</th>
-    <th> möglcihe Parameter</th>
+    <th> mögliche Parameter</th>
   </tr>
   <tr>
-    <td>kubectl get node</td>
-    <td>Liefert die Nodes retour</td>
+    <td> kubectl create -f <mark>replication.yml <mark></td>
+    <td>erstellt einen Replika kommend von einem Yaml file</td>
     <td></td>
   </tr>
+   <tr>
+    <td> kubectl describe replicaset <mark></td>
+    <td>Beschreibung des Replikasets</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td> kubectl replace -f <mark>replication.yml <mark></td>
+    <td>Wenn sich die Anzahl der Replika eines ausgerollten Replika sets ändern, muss das im Yaml geändert werden und anschließend neu eingelesen werden</td>
+    <td></td>
+  </tr>
+  tr>
+    <td> kubectl scale --replicas= 3 -f <mark>replication.yml <mark></td>
+    <td>hierbei wird ebenfalls eine neue Anazahl an Replikas gewartete. </td>
+    <td></td>
+  </tr>
+  tr>
+    <td> kubectl delete replicaset myapp-replicaset <mark></td>
+    <td>hierbei wird ebenfalls eine neue Anazahl an Replikas gewartete. </td>
+    <td></td>
+  </tr>
+  
 <table>
