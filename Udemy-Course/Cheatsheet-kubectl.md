@@ -142,6 +142,11 @@ Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML f
   <tr>
     <td> kubectl get deployments <mark></td>
     <td>Anzeige der ausgerollten Deployments, das erstellt logischerweise replikas und das wiederum Pods </td>
+    <td>Wenn ich diesen Berreich mit dem get all betrachte seh ich dass der die Replikas und dei pods erstellt hat die auch seperat abrufen kann</td>
+  </tr>
+  <tr>
+    <td> kubectl describe deployments <mark></td>
+    <td>Anzeige der weiteren Infos über das Deployment </td>
     <td></td>
   </tr>
 <table>
