@@ -97,6 +97,12 @@ Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML f
     <td>Beschreibung des Replikasets</td>
     <td></td>
   </tr>
+
+  tr>
+    <td> kubectl edit replicaset new-replica-set <mark></td>
+    <td>update des bestehenden Replikas </td>
+    <td></td>
+  </tr>
   <tr>
     <td> kubectl replace -f <mark>replication.yml <mark></td>
     <td>Wenn sich die Anzahl der Replika eines ausgerollten Replika sets ändern, muss das im Yaml geändert werden und anschließend neu eingelesen werden</td>
@@ -112,5 +118,30 @@ Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML f
     <td>hierbei wird ebenfalls eine neue Anazahl an Replikas gewartete. </td>
     <td></td>
   </tr>
+
+  kubectl edit replicaset new-replica-set
   
+<table>
+
+
+## Deployments
+
+Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML file für die Erstellung eines Replicas.
+
+<table style="width:100%">
+  <tr>
+    <th>Command</th>
+    <th>Umsetzung</th>
+    <th>mögliche Parameter</th>
+  </tr> 
+  <tr>
+    <td> kubectl create -f deployment-definition.yml <mark></td>
+    <td>hierbei wird ebenfalls eine neue Anazahl an Replikas gewartete. </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td> kubectl get deployments <mark></td>
+    <td>Anzeige der ausgerollten Deployments, das erstellt logischerweise replikas und das wiederum Pods </td>
+    <td></td>
+  </tr>
 <table>
