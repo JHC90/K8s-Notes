@@ -126,7 +126,7 @@ Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML f
 
 ## Deployments
 
-Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML file für die Erstellung eines Replicas.
+Hier das <a href="./TemplateDeployment.yml">Template-Deployment</a>, ein Beispiel YML file für die Erstellung eines Replicas.
 
 <table style="width:100%">
   <tr>
