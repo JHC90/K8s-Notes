@@ -25,7 +25,7 @@ Hier das <a href="./TemplatePod.yml">Template-pod</a>, ein Beispiel YML file fü
   <tr>
     <th>Command</th>
     <th>Umsetzung</th>
-    <th> möglcihe Parameter</th>
+    <th> mögliche Parameter</th>
   </tr>
   <tr>
     <td>kubectl get pods</td>
@@ -45,12 +45,13 @@ Hier das <a href="./TemplatePod.yml">Template-pod</a>, ein Beispiel YML file fü
   <tr>
     <td>kubectl run nginx --image nginx<br><br>
    kubectl run redis --image=redis123 --generator=run-pod/v1</td>
-    <td>erstmaliger Download von einem Image aus dem dann anschließend pods generiert werrden</td>
+    <td>
+    erstmaliger Download von einem Image aus dem dann anschließend pods generiert werrden</td>
     <td></td>
   </tr>
   <tr>
     <td>kubectl run nginx</td>
-    <td>nach erstmaligem Download können die Pods so gestartet werden</td>
+    <td>!!! das hier ist im grunde genommen ein Deployment!!!nach erstmaligem Download können die Pods so gestartet werden</td>
     <td></td>
   </tr>
   <tr>
@@ -137,7 +138,7 @@ Hier das <a href="./TemplateDeployment.yml">Template-Deployment</a>, ein Beispie
   <tr>
     <td> kubectl create -f deployment-definition.yml <mark></td>
     <td>hierbei wird ebenfalls eine neue Anazahl an Replikas gewartete. </td>
-    <td></td>
+    <td>kubectl create -f deployment-definition.yml --record || hier wird die Versionierung dann mit getrackt </td>
   </tr>
   <tr>
     <td> kubectl get deployments <mark></td>
@@ -147,6 +148,39 @@ Hier das <a href="./TemplateDeployment.yml">Template-Deployment</a>, ein Beispie
   <tr>
     <td> kubectl describe deployments <mark></td>
     <td>Anzeige der weiteren Infos über das Deployment </td>
+    <td></td>
+  </tr>
+<table>
+
+### Rollouts (gehört iwie zu deployments)
+
+Hier das <a href="./TemplateDeployment.yml">Template-Deployment</a>, ein Beispiel YML file für die Erstellung eines Replicas.
+
+<table style="width:100%">
+  <tr>
+    <th>Command</th>
+    <th>Umsetzung</th>
+    <th>mögliche Parameter</th>
+  </tr> 
+  <tr>
+    <td> kubectl rollout status deployment/<mark>NameOdPod</mark></td>
+    <td>Anzeige in welcher Version (revision) wir in diesem Moment sind </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td> kubectl rollout history deployment/<mark>NameOdPod</mark></td>
+    <td>Anzeige in welcher Version (revision) wir in diesem Moment sind </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td> kubectl apply -f deployment-definition.yml<br><br>
+    kubectl set image deployment/myapp nginx=nginx:1.9.1. </td>
+    <td>Szenario ist in diesem BSP dass das yml geändert wurde und jetzt auf ein anderes Image bei der erslleung der Replika / Pod verweist(neu version weil halt weiter entwickelt), dann wird hierbüber nun eine neues Deployment getriggert </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td> kubectl rollout undo deployment/<mark>NameOdPod</mark></td>
+    <td>Rollback falls der Rollout nicht so toll läuft wie gewünscht</td>
     <td></td>
   </tr>
 <table>
