@@ -80,7 +80,7 @@ Hier das <a href="./TemplatePod.yml">Template-pod</a>, ein Beispiel YML file fü
 
 ## Replikas
 
-Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML file für die Erstellung eines Replicas.
+Hier das <a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML file für die Erstellung eines Replicas.
 
 <table style="width:100%">
   <tr>
@@ -99,7 +99,7 @@ Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML f
     <td></td>
   </tr>
 
-  tr>
+  <tr>
     <td> kubectl edit replicaset new-replica-set <mark></td>
     <td>update des bestehenden Replikas </td>
     <td></td>
@@ -109,12 +109,12 @@ Hier das<a href="./TemplateReplica.yml">Template-Replica</a>, ein Beispiel YML f
     <td>Wenn sich die Anzahl der Replika eines ausgerollten Replika sets ändern, muss das im Yaml geändert werden und anschließend neu eingelesen werden</td>
     <td></td>
   </tr>
-  tr>
+  <tr>
     <td> kubectl scale --replicas= 3 -f <mark>replication.yml <mark></td>
     <td>hierbei wird ebenfalls eine neue Anazahl an Replikas gewartete. </td>
     <td></td>
   </tr>
-  tr>
+  <tr>
     <td> kubectl delete replicaset myapp-replicaset <mark></td>
     <td>hierbei wird ebenfalls eine neue Anazahl an Replikas gewartete. </td>
     <td></td>
@@ -183,4 +183,47 @@ Hier das <a href="./TemplateDeployment.yml">Template-Deployment</a>, ein Beispie
     <td>Rollback falls der Rollout nicht so toll läuft wie gewünscht</td>
     <td></td>
   </tr>
+<table>
+
+
+### networking
+
+Hier das <a href="./TemplateDeployment.yml">Template-Deployment</a>, ein Beispiel YML file für die Erstellung eines Replicas.
+
+<table style="width:100%">
+  <tr>
+    <th>Command</th>
+    <th>Umsetzung</th>
+    <th>mögliche Parameter</th>
+  </tr> 
+    <tr>
+    <td>kubectl get pods -o wide</td>
+    <td>Einblick in die IP-Adresse</td>
+    <th></th>
+  </tr> 
+ 
+<table>
+
+### Service
+
+Hier das <a href="./TemplateService.yml">Template-Deployment</a>, ein Beispiel YML file für die Erstellung eines Replicas.
+
+<table style="width:100%">
+  <tr>
+    <th>Command</th>
+    <th>Umsetzung</th>
+    <th>mögliche Parameter</th>
+  </tr> 
+    <tr>
+    <td>kubectl create -f service-definition.yml</td>
+    <td>erstellen eines Servies, der hat dann einen Cluster IP</td>
+    <th>mit anderen worten jetzt habe ich aus meinem nicht k8s netzwerk die möglichkeit auf den Service zuzugreifen ohne dass ich rein ssh muss. </th>
+  </tr> 
+  </tr> 
+    <tr>
+    <td>kubectl describe service</td>
+    <td>Zeigt nähere Infos zu einem Service</td>
+    <th></th>
+  </tr> 
+ 
 <table>
